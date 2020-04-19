@@ -30,6 +30,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_yasg',
     'drf_generators',
     'api',
 )
