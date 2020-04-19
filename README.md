@@ -3,7 +3,6 @@
 
 Django Rest Framework project featuring API Views, Serializers and Urls generated using drf-generators.
 
-The tests file contains classes to generate and test each style of API.
 
 #### Requirement
 * Python3
