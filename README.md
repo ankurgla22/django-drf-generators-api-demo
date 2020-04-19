@@ -5,18 +5,74 @@ Django Rest Framework project featuring API Views, Serializers and Urls generate
 
 The tests file contains classes to generate and test each style of API.
 
-| Method | Test |
-| ------ | ------ |
-| `test_create_post` | Tests creating a Post object |
-| `test_list_post` | Tests gettin a list of Post objects |
-| `test_retrieve_post` | Tests geting a Post object |
-| `test_update_post` | Tests updating a Post object |
-| `test_delete_post` | Tests deleting a Post object |
+#### Requirement
+* Python3
+* pip3
 
-To run the tests on all applications, simply type the following command:
+#### Installation
 
-```bash
-python manage.py test
+```
+cd django-drf-generators-api-demo
+
+pip3 install -r requirements.txt
+```
+
+#### Update api/model.py
+
+````
+from rest_framework.serializers import ModelSerializer
+from api.models import Country, City
+
+
+class CountrySerializer(ModelSerializer):
+
+    class Meta:
+        model = Country
+        fields = '__all__'
+
+
+class CitySerializer(ModelSerializer):
+
+    class Meta:
+        model = City
+        fields = '__all__'
+        
+ ```
+#### Generate APIs
+
+```
+python3 manage.py generate api
+```
+
+#### Migrate DB
+
+```
+python3 manage.py makemigrations api
+python3 manage.py migrate
+```
+
+#### RUN Server
+
+```
+python3 manage.py runserver 0.0.0.0:8000
+```
+
+#### Check API
+
+```
+http://127.0.0.1:8000/api/country/
+```
+
+#### Create Django Admin User
+
+```
+python3 manage.py createsuperuser
+
+```
+#### Check Django Admin Console
+
+```
+http://127.0.0.1:8000/admin/
 ```
 
 That's it!
