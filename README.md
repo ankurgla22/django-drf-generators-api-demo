@@ -19,7 +19,8 @@ pip3 install -r requirements.txt
 
 #### Update api/model.py
 
-````
+
+```
 from rest_framework.serializers import ModelSerializer
 from api.models import Country, City
 
@@ -37,7 +38,8 @@ class CitySerializer(ModelSerializer):
         model = City
         fields = '__all__'
         
- ```
+```
+ 
 #### Generate APIs
 
 ```
